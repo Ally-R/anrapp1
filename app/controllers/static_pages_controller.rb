@@ -1,10 +1,10 @@
 class StaticPagesController < ApplicationController
-  def home
+  def about
   end
 
-  def campus
+  def episodes
   end
 
-  def town
+  def characters
   end
 end
