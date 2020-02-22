@@ -1,0 +1,18 @@
+<% provide(:title, "About") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Ally's XWP Review</title>
+  </head>
+  <body>
+    <h1>About Ally's XWP Review</h1>
+    <p>
+      Hi! Welcome to my comprehensive (and in-progress) review of the best TV show of all time, Xena: Warrior Princess. This page contains a bit about the inspiration for this website, as well as what you can find on it and how to navigate it.
+
+Ideas:
+- Xena blog
+- Gallery
+- Stories
+    </p>
+  </body>
+</html>
