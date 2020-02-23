@@ -5,9 +5,7 @@ $light-tan: #EFE8D9;
 $page-back-col: #7F7E67;
 $page-accent-col: #646451;
 
-.jumbotron {
-  background-color: $page-accent-col;
-}
+.jumbotron{background-color: $page-accent-col;}
 
 body {
   background-color: $page-back-col;

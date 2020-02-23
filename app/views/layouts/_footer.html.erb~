@@ -1,0 +1,5 @@
+<footer class="footer">
+  <nav>
+      <li><%= link_to "Contact", '#' %></li>
+  </nav>
+</footer>

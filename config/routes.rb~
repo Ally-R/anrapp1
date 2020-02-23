@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'static_pages/about'
+  get '/about', to: 'static_pages#about'
 
-  get 'static_pages/episodes'
+  get '/episodes', to: '#'
 
-  get 'static_pages/characters'
+  get '/characters', to: 'static_pages#characters'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  # Render 'hello' by running the app
-  root 'application#hello'
+  # Render about page when first running the app
+  root 'static_pages#about'
 end

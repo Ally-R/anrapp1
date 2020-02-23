@@ -10,4 +10,4 @@ Ideas:
   </p>
 </div>
 
-<%= link_to image_tag("xwp.png", alt: "XWP Logo")%>
+<%= link_to image_tag("xwp-logo.png", alt: "XWP Logo")%>
