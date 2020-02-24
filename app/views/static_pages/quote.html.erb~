@@ -1,2 +1,4 @@
-<% provide(:title, "Episodes") %>
+<% provide(:title, "Random Quote") %>
 <h1>Random XWP Quote:</h1>
+<p><%= @result %></p>
+<p><%= link_to 'New quote:', quote_path, class: "link-color" %></p>

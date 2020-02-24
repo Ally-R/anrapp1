@@ -4,9 +4,19 @@
 $light-tan: #EFE8D9;
 $page-back-col: #7F7E67;
 $page-accent-col: #646451;
+$link-col: #f0c39c;
 
 .jumbotron {
   background-color: $page-accent-col;
+}
+
+.link-color{
+  color: $link-col;
+}
+
+.link-color:hover {
+  color: $link-col;
+  text-decoration: underline;
 }
 
 body {

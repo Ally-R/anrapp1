@@ -7,4 +7,11 @@ class StaticPagesController < ApplicationController
 
   def characters
   end
+
+  def contact
+  end
+ 
+  def quote
+    @result = (1..6).to_a.shuffle.first
+  end
 end
