@@ -1,0 +1,2 @@
+<% provide(:title, "Episodes") %>
+<h1>Random XWP Quote:</h1>

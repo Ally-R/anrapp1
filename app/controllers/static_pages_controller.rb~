@@ -7,10 +7,4 @@ class StaticPagesController < ApplicationController
 
   def characters
   end
-
-  def contact
-  end
- 
-  def quote
-  end
 end

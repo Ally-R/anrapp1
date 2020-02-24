@@ -30,4 +30,16 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Characters | #{@base_title}"
   end
 
+  test "should get contact" do
+    get contact_path
+    assert_response :success
+    assert_select "title", "Contact | #{@base_title}"
+  end
+
+  test "should get quote" do
+    get quote_path
+    assert_response :success
+    assert_select "title", "Random Quote | #{@base_title}"
+  end
+
 end
