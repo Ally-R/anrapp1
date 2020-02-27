@@ -36,6 +36,12 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Contact | #{@base_title}"
   end
 
+  test "controller instance vars not null" do
+    get quote_path
+    assert_response :success
+    assert_not_nil assigns(:result)
+  end
+
   test "should get quote" do
     get quote_path
     assert_response :success
