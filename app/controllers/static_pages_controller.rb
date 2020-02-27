@@ -38,6 +38,6 @@ class StaticPagesController < ApplicationController
              "Well, when I say 'Don't mention it,' I mean...you can mention it.",
              "It's easy to preach peace when you live in heaven. Where is come from you gotta fight for what you believe in.",
              "I'm just a girl in search of a really good sword."]
-    @result = qlist.shuffle.first
+    @result = qlist[rand(25)]
   end
 end
