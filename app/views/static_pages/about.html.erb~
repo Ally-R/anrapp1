@@ -11,7 +11,7 @@
     </ul>
   </p>
   <p>
-    Want a random Xena quote? <%= link_to 'Click here!', '/quote' %>
+    Want a random Xena quote? <%= link_to 'Click here!', quote_path, class: "link-color" %>
   </p>
 </div>
 
