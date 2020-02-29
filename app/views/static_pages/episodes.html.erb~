@@ -1,13 +1,5 @@
 <% provide(:title, "Episodes") %>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= yield(:title) %> | Ally's XWP Review</title>
-  </head>
-  <body>
-    <h1>XWP Reviews and Information (by Episode)</h1>
-    <h3>Season 1</h3>
-    <p>1. Sins of the Past<br/>
-       2. Chariots of War</p>
-  </body>
-</html>
+<h1>XWP Reviews and Information (by Episode)</h1>
+<h3>Season 1</h3>
+<p>1. Sins of the Past<br/>
+   2. Chariots of War</p>
