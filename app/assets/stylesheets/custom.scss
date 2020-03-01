@@ -40,7 +40,20 @@ $link-col: #f0c39c;
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
+  color: $light-tan;
+}
+
+.sidenav c {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 12px;
   color: $link-col;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav c:hover {
+  color: $light-tan;
 }
 
 /* Style page content */
