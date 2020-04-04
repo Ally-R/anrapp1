@@ -1,0 +1,12 @@
+<% provide(:title, "Comments") %>
+<h1>Posted Comments from Avid Site Viewers</h1>
+<ul class="entries">
+  <% @entries.each do |entry| %>
+    <br/>
+    <h3> <%= entry.title %> </h3>
+    <em> In season <%= entry.season %>, episode <%= entry.episode %> </em>
+    <p> <b>A response to:</b> <%= entry.response_to %> </p>
+    <p> <%= entry.comment %> </p>
+    <p> Sources: <%= entry.sources %> </p>
+  <% end %>
+</ul>

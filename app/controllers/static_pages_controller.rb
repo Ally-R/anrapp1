@@ -1,3 +1,4 @@
+# coding: utf-8
 class StaticPagesController < ApplicationController
   def about
   end
@@ -39,5 +40,9 @@ class StaticPagesController < ApplicationController
              "It's easy to preach peace when you live in heaven. Where is come from you gotta fight for what you believe in.",
              "I'm just a girl in search of a really good sword."]
     @result = qlist[rand(25)]
+  end
+
+  def posts
+    @entries = Entry.all
   end
 end

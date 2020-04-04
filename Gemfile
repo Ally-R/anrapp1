@@ -1,3 +1,4 @@
+# coding: utf-8
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -51,6 +52,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rb-readline'
 end
 
 group :development do

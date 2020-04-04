@@ -48,4 +48,10 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Random Quote | #{@base_title}"
   end
 
+  test "should get posts" do
+    get posts_path
+    assert_response :success
+    assert_select "title", "Comments | #{@base_title}"
+  end
+
 end
