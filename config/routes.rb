@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/quote', to: 'static_pages#quote'
   get '/posts', to: 'static_pages#posts'
+  get '/entries', to: 'static_pages#posts'
+  post '/posts', to: 'static_pages#create'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

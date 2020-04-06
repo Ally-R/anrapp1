@@ -10,3 +10,29 @@
     <p> Sources: <%= entry.sources %> </p>
   <% end %>
 </ul>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@entry, url: posts_path) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :season %>
+      <%= f.number_field :season %>
+
+      <%= f.label :episode %>
+      <%= f.number_field :episode %>
+
+      <%= f.label :response_to, "Response to:" %>
+      <%= f.text_field :response_to %>
+
+      <%= f.label :comment, "Post/comment:" %>
+      <%= f.text_field :comment %>
+
+      <%= f.label :sources %>
+      <%= f.text_field :sources %>
+
+      <%= f.submit "Submit my post", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

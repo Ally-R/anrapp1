@@ -44,5 +44,17 @@ class StaticPagesController < ApplicationController
 
   def posts
     @entries = Entry.all
+    @entry = Entry.new
   end
+
+  def create
+    @entry = Entry.new(params.require(:entry).permit(:title, :season, :episode,
+                                   :response_to, :comment, :sources))
+    if @entry.save
+      redirect_to 'static_pages#posts'
+    else
+      render 'posts'
+    end
+  end
+
 end
