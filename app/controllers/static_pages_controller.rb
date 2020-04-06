@@ -51,7 +51,7 @@ class StaticPagesController < ApplicationController
     @entry = Entry.new(params.require(:entry).permit(:title, :season, :episode,
                                    :response_to, :comment, :sources))
     if @entry.save
-      redirect_to 'static_pages#posts'
+      redirect_to '/posts'
     else
       render 'posts'
     end
