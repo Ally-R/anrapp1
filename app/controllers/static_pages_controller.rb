@@ -26,7 +26,7 @@ class StaticPagesController < ApplicationController
              "A long time ago you told me the cycle of hate has to end and the only way to end it is through love. It's a hard lesson to learn.",
              "Now I want some straight answers.",
              "Trust me, you don’t want to make me angry.",
-             "You may be immortal but I can still do damage. How'd you like to spend eternity in 5 pieces?",
+             "You may be immortal but I can still do damage. How'd you like to spend eternity in five pieces?",
              "We all eventually become what we pretend we are.",
              "This love stuff is a real pain.",
              "You can't be in love with Joxer. He's ... well, he's Joxer.",
@@ -36,8 +36,8 @@ class StaticPagesController < ApplicationController
              "Hey, I'm not the one with the fungus among us.",
              "Don't make me hurt you, Scabrielle.",
              "A warrior cannot ask these question in the heat of battle. When the kill is there, you have to take it.",
-             "Well, when I say 'Don't mention it,' I mean...you can mention it.",
-             "It's easy to preach peace when you live in heaven. Where is come from you gotta fight for what you believe in.",
+             "Well, when I say 'Don't mention it,' I mean... you can mention it.",
+             "It's easy to preach peace when you live in heaven. Where I come from you gotta fight for what you believe in.",
              "I'm just a girl in search of a really good sword."]
     @result = qlist[rand(25)]
   end
