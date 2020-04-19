@@ -30,7 +30,7 @@ $link-col: #f0c39c;
   color: $light-tan;
 }
 
-.sidenav a {
+.sidenav a.season {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
@@ -39,11 +39,11 @@ $link-col: #f0c39c;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+.sidenav a.season:hover {
   color: $light-tan;
 }
 
-.sidenav c {
+.sidenav a.ep {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 12px;
@@ -52,7 +52,7 @@ $link-col: #f0c39c;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav c:hover {
+.sidenav a.ep:hover {
   color: $light-tan;
 }
 
@@ -65,7 +65,8 @@ $link-col: #f0c39c;
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav a.season {font-size: 18px;}
+  .sidenav a.ep {font-size: 10px}
 }
 
 
