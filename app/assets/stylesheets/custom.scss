@@ -62,6 +62,14 @@ $link-col: #f0c39c;
   padding: 0px 10px;
 }
 
+.main a {
+  color: $link-col;
+}
+
+.main a:hover {
+  color: $light-tan;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -74,13 +82,28 @@ $link-col: #f0c39c;
  |    Links    |
  *-------------*/
 
-.link-color{
+.link-color {
   color: $link-col;
 }
 
 .link-color:hover {
   color: $link-col;
   text-decoration: underline;
+}
+
+
+/*-------------*-----------------------
+ |    Image    |
+ *-------------*/
+
+img.medium {
+  max-width:25%;
+  max-height:25%;
+}
+
+img.small {
+  max-width:5%;
+  max-height:5%;
 }
 
 

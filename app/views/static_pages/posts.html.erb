@@ -1,5 +1,6 @@
 <% provide(:title, "Comments") %>
 <h1>Posted Comments from Site Viewers</h1>
+<p><i>Want to submit a post? <a href="#form"> Skip to bottom</a></i></p>
 <ul class="entries">
   <% @entries.each do |entry| %>
     <br/>
@@ -11,7 +12,7 @@
   <% end %>
 </ul>
 
-<div class="row">
+<div class="row" id="form">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@entry, url: posts_path) do |f| %>
       <%= f.label :title %>
