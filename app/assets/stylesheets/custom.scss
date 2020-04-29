@@ -101,9 +101,18 @@ img.medium {
   max-height:25%;
 }
 
+img.sm-med {
+  max-width:15%;
+  max-height:15%;
+  margin-top: 9px;
+  float: left;
+}
+
 img.small {
   max-width:5%;
   max-height:5%;
+  margin-top: 9px;
+  float: left;
 }
 
 
