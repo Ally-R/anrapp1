@@ -104,7 +104,7 @@ img.medium {
 img.sm-med {
   max-width:15%;
   max-height:15%;
-  margin-top: 9px;
+  margin-bottom: 9px;
   float: left;
 }
 
@@ -156,6 +156,12 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+h1:target {
+    //margin-top: 30px;
+    //padding-top: 100px;
+  //align: center;
 }
 
 h2 {
@@ -255,15 +261,58 @@ footer ul li {
  |    Form    |
  *------------*/
 
-/* forms */
-
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
+  color: #a0a0a0;
   @include box_sizing;
 }
 
 input {
   height: auto !important;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+input:focus, textarea:focus, select:focus {
+    border: 2px solid seagreen !important;
+}
+
+.form-subtext {
+  color: #ddd;
+  font-size: 0.5em;
+  font-style: italic;
+}
+
+.button {
+    color: $link-col;
+    background-color: $page-accent-col;
+    border: 1px solid $link-col;
+    padding: 8px 8px 8px 8px;
+}
+
+.button:hover {
+    text-style: underline;
+}
+
+
+/* Error Messages*/
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }

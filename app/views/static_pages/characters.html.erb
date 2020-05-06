@@ -1,6 +1,21 @@
 <% provide(:title, "Characters") %>
-<h1>XWP Characters</h1>
-<p>In order of importance.</p>
-<h3>Gabrielle</h3>
-<p>While we all love Xena, no one can deny the absolutely incredible character arc and development of [spoilers] The Great Battling Bard herself, Gabs.</p>
-<h3>Sirene</h3>
+<!-- Side navigation -->
+<div class="sidenav">
+  <% @characters.keys.each do |character| %>
+    <%= link_to character, "#"+character, class: "season"%>
+  <% end %>
+</div>
+
+<!-- Page content -->
+<div class="main">
+  <h1>XWP Characters</h1>
+  <p><i>List is categorized vaguely in order of importance/appearance. Incomplete list, more will be added and the order will likely change. I skipped many characters that I didn't feel like writing about *cough* Joxer, but I will come back for them... eventually.</i></p>
+  <% @characters.keys.each do |character| %>
+    <h3 id="<%=character%>"><%=character%></h3>
+    <% if @characters[character] != nil && @characters[character] != "" %>
+      <p><%= @characters[character] %></p>
+    <% else %>
+      <p>I haven't gotten around to writing a summary about this character yet, but the ones that appear on this page are next on my list.</p>
+    <% end %>
+  <% end %>
+</div>

@@ -1,39 +1,62 @@
 <% provide(:title, "Comments") %>
 <h1>Posted Comments from Site Viewers</h1>
-<p><i>Want to submit a post? <a href="#form"> Skip to bottom</a></i></p>
+<p><i>Want to submit a post? <a href="/posts#form", class="link-color"> Skip to bottom.</a></i></p>
 <ul class="entries">
   <% @entries.each do |entry| %>
     <br/>
     <h3> <%= entry.title %> </h3>
-    <em> In season <%= entry.season %>, episode <%= entry.episode %> </em>
-    <p> <b>A response to:</b> <%= entry.response_to %> </p>
+    <% if entry.episode != nil %>
+      <em> In season <%= entry.season %>, episode <%= entry.episode %> </em>
+    <% else %>
+      <em> In season <%= entry.season %> </em>
+    <% end %>
+      
+    <% if entry.response_to != "" %>x
+      <p> <b>A response to:</b> <%= entry.response_to %> </p>
+    <% else %>
+      <p></p>
+    <% end %>
+      
     <p> <%= entry.comment %> </p>
-    <p> Sources: <%= entry.sources %> </p>
+
+    <% if entry.sources != "" %>
+      <p> Sources: <%= entry.sources %> </p>
+    <% end %>
   <% end %>
 </ul>
 
-<div class="row" id="form">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@entry, url: posts_path) do |f| %>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
+<br><hr / id="form"><br>
 
-      <%= f.label :season %>
-      <%= f.number_field :season %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>Submit a Post</h1>
+    <h3>
+    <%= form_for(@entry, url: posts_path) do |f| %>
+    <%= render 'layouts/error_messages' %>
+
+      <%= f.label :title, "Title of post*" %>
+      <%= f.text_field :title, required: true, class: 'form-control' %>
+
+      <%= f.label :season, "Season*" %>
+      <%= f.select :season, @seasons, :prompt => "Select season", required: true, class: 'form-control' %>
 
       <%= f.label :episode %>
-      <%= f.number_field :episode %>
+      <%= f.select :episode, @eps, :prompt => "Select episode", class: 'form-control' %>
 
-      <%= f.label :response_to, "Response to:" %>
-      <%= f.text_field :response_to %>
+      <%= f.label :response_to, "Response to" %>
+      <p class="form-subtext">Briefly state what character, plot point, previous post, etc. you are responding to, e.g. "Xena's Chakram"</p>
+      <%= f.text_field :response_to, class: 'form-control' %>
 
-      <%= f.label :comment, "Post/comment:" %>
-      <%= f.text_field :comment %>
+      <%= f.label :comment, "Post content*" %>
+      <p class="form-subtext">What you want to say. To cite sources, please brackets as footnote markers, e.g. [1]. Then list the sources with the brackets below.</p>
+      <%= f.text_area :comment, as: :text, required: true, class: 'form-control' %>
 
       <%= f.label :sources %>
-      <%= f.text_field :sources %>
+       <p class="form-subtext">Please list any sources you referenced in your comment. Indicate with brackets both in the comment body and here. e.g., [1] Source 1; [2] Source 2.</p>
+      <%= f.text_field :sources, class: 'form-control' %>
 
-      <%= f.submit "Submit my post", class: "btn btn-primary" %>
-    <% end %>
+      <%= f.submit "Submit my post", class: "button" %>
+      <% end %>
+      </h3>
   </div>
 </div>
