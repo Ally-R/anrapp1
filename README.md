@@ -2,7 +2,7 @@
 # Ally R
 
 ## Project Summary
-Created personal TV show review website using Ruby on Rails with dynamic elements (content randomization, databases).
+Created personal TV show review website in Ruby on Rails with dynamic elements (content randomization, databases).
 Deployed website to Heroku, created databases using Heroku PostgreSQL.
 
 ## Ruby on Rails Development Skills
