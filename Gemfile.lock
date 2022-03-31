@@ -117,7 +117,7 @@ GEM
       ruby-progressbar
     multi_json (1.14.1)
     nenv (0.3.0)
-    nio4r (2.5.2)
+    nio4r (2.5.8)
     nokogiri (1.13.1)
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
@@ -129,7 +129,7 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (4.0.6)
-    puma (4.3.11)
+    puma (4.3.12)
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
@@ -237,7 +237,7 @@ DEPENDENCIES
   minitest (= 5.10.3)
   minitest-reporters (= 1.1.14)
   pg (= 0.20.0)
-  puma (= 4.3.11)
+  puma (= 4.3.12)
   rails (= 5.1.6)
   rails-controller-testing (= 1.0.2)
   rb-readline
